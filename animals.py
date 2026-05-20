@@ -1,14 +1,14 @@
 class Animal:
-    def __init__(self, name, age, sound):
+    def __init__(self, name, age, speak):
         self.__name = name
         self.__age = age
-        self.__sound = sound
+        self.__speak = speak
 
     def speak(self):
-        print("Grrrrrrr")
+        print(f"{self.__name} says {self.__speak}")
 
     def move(self):
-        pass
+        print('dodged an obstacle')
 
     def describe(self):
         pass
@@ -16,7 +16,7 @@ class Animal:
     def __str__(self):
         return f"name: {self.__name}\n" + \
                f"age: {self.__age}\n" + \
-               f"sound: {self.__sound}"
+               f"sound: {self.__speak}"
 
 
 class Dog(Animal):
@@ -34,7 +34,7 @@ class Dog(Animal):
         print('Woof! Woof!')
 
     def move(self):
-        pass
+        print('jumps and catches a frisbee.')
 
 
 class Bird(Animal):
