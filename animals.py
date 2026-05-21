@@ -8,7 +8,7 @@ class Animal:
         print(f"{self.__name} says {self.__speak}")
 
     def move(self):
-        print('dodged an obstacle')
+        print(f'{self.__name} dodged an obstacle')
 
     def describe(self):
         pass
@@ -22,13 +22,7 @@ class Animal:
 class Dog(Animal):
     def __init__(self, name, age, breed):
         super().__init__(self, name, age)
-        self.__breed = breed
-    
-    def set_special(self, breed):
-        self.__breed = breed
-
-    def get_special(self):
-        return self.__breed
+        self.breed = breed
 
     def speak(self):
         print('Woof! Woof!')
@@ -39,9 +33,8 @@ class Dog(Animal):
 
 class Bird(Animal):
     def __init__(self, name, age, can_fly):
-        self.__name = name
-        self.__age = age
-        self.__can_fly = can_fly
+        super().__init__(self, name, age)
+        self.can_fly = can_fly
 
     def move(self):
         pass
@@ -49,9 +42,8 @@ class Bird(Animal):
 
 class Fish(Animal):
     def __init__(self, name, age, water_type):
-        self.__name = name
-        self.__age = age
-        self.__water_type = water_type
+        super().__init__(self, name, age)
+        self.water_type = water_type
 
     def move(self):
         pass
@@ -59,15 +51,11 @@ class Fish(Animal):
 
 class Cat(Animal):
     def __init__(self, name, age, indoor):
-        self.__name = name
-        self.__age = age
-        self.__indoor = indoor
+        super().__init__(self, name, age)
+        self.indoor = indoor
 
     def speak(self):
         pass
 
     def move(self):
         pass
-
-dog = Dog(Animal)
-dog.speak
