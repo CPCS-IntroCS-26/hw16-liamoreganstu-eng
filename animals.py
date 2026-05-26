@@ -5,13 +5,13 @@ class Animal:
         self.__speak = speak
 
     def speak(self):
-        print(f"{self.__name} says {self.__speak}")
+        print(f"{self.name} says {self.speak}")
 
     def move(self):
         print(f'{self.__name} dodged an obstacle')
 
     def describe(self):
-        pass
+        print(self.__name, self.__age)
 
     def __str__(self):
         return f"name: {self.__name}\n" + \
@@ -28,7 +28,15 @@ class Dog(Animal):
         print('Woof! Woof!')
 
     def move(self):
-        print('jumps and catches a frisbee.')
+        print('jumps and catches a frisbee')
+    
+    def describe(self):
+        print(f'{self.name} is {self.__age} years old and is a {self.breed}')
+
+    def __str__(self):
+        return f"name: {self.__name}\n" + \
+               f"age: {self.__age}\n" + \
+               f"sound: {self.__speak}"
 
 
 class Bird(Animal):
@@ -37,7 +45,15 @@ class Bird(Animal):
         self.can_fly = can_fly
 
     def move(self):
-        pass
+        print('flew home.')
+
+    def describe(self):
+        print(f'{self.name} is {self.__age} years old and {self.can_fly} fly')
+
+    def __str__(self):
+        return f"name: {self.__name}\n" + \
+               f"age: {self.__age}\n" + \
+               f"sound: {self.__speak}"
 
 
 class Fish(Animal):
@@ -46,7 +62,18 @@ class Fish(Animal):
         self.water_type = water_type
 
     def move(self):
-        pass
+        print('swam away from the shark.')
+
+    def speak(self):
+        print('blub... blub')
+
+    def describe(self):
+            print(f'{self.name} is {self.__age} years old and is a {self.water_type} water fish')
+
+    def __str__(self):
+        return f"name: {self.__name}\n" + \
+               f"age: {self.__age}\n" + \
+               f"sound: {self.__speak}"
 
 
 class Cat(Animal):
@@ -55,7 +82,15 @@ class Cat(Animal):
         self.indoor = indoor
 
     def speak(self):
-        pass
+        print('ppprrrrr')
 
     def move(self):
-        pass
+        print('pounced on a mouse.')
+
+    def describe(self):
+        print(f'{self.name} is {self.__age} years old and {self.indoor} an indoor cat')
+
+    def __str__(self):
+        return f"name: {self.__name}\n" + \
+               f"age: {self.__age}\n" + \
+               f"sound: {self.__speak}"
