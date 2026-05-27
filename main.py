@@ -14,9 +14,9 @@ def main():
 
     # Loop over all animals and call speak(), move(), and describe()
     for animal in animals:
-        print(animal.speak())
-        print(animal.move())
-        print(animal.describe())
+        animal.makeSound()
+        animal.move()
+        animal.describe()
 
 
 if __name__ == "__main__":
